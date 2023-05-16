@@ -1,1 +1,3 @@
-# MERN-stack-project-ema-john-server
+# MERN stack project
+
+## Ema-John server
