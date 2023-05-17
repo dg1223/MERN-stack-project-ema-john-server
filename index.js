@@ -34,6 +34,13 @@ async function run() {
       res.send(result);
     });
 
+    // Pagination
+    app.get("/totalProducts", async (req, res) => {
+      const result = await productCollection.estimatedDocumentCount();
+      // Must wrap numbers as objects when sending a response
+      res.send({ totalProducts: result });
+    });
+
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log(
